@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CareerPilot AI - Cover Letter Generator</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f6f9;
+margin:0;
+}
+
+.container{
+width:800px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,.1);
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:20px;
+font-size:16px;
+box-sizing:border-box;
+}
+
+textarea{
+height:120px;
+}
+
+button{
+background:#4CAF50;
+color:white;
+border:none;
+padding:14px 28px;
+font-size:17px;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#3d9140;
+}
+
+.letter{
+margin-top:30px;
+padding:30px;
+border:1px solid #ddd;
+background:#fafafa;
+line-height:1.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top">
+<h1>CareerPilot AI</h1>
+
+<button onclick="window.location.href='../index.html'">
+🏠 Home
+</button>
+</div>
+
+<h2>Cover Letter Generator</h2>
+
+<label>Full Name</label>
+<input type="text" id="fullname">
+
+<label>Job Position</label>
+<input type="text" id="job">
+
+<label>Your Experience / Skills</label>
+<textarea id="experience"></textarea>
+
+<button onclick="generateLetter()">
+Generate Cover Letter
+</button>
+<button onclick="downloadPDF()" style="margin-left:10px;background:#2196F3;">
+📄 Download PDF
+</button>
+<div id="result"></div>
+
+</div>
+
+<script src="../js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+
+</html>
